@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <!-- 모바일 웹브라우져 대응 -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>맥딜리버리</title>
+<title>맥딜리버리-홈</title>
 <!-- Bootstrap css 로딩 -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -94,9 +94,79 @@
   
  </div> <!-- /header -->
  
+ <div class="slide-promotion home-section">
+  <div id="carouselIndicators" data-ride="carousel">
+   <ol class="carousel-indicators">
+    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselIndicators" data-slide-to="5"></li>
+   </ol>
+  </div> 
+  
+   <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+     <img src="images/slide-pager-target-1.png">
+    </div>
+    <div class="carousel-item">
+     <img src="images/slide-pager-target-2.jpg">
+    </div>
+    <div class="carousel-item">
+     <img src="images/slide-pager-target-3.jpg">
+    </div>
+    <div class="carousel-item">
+     <img src="images/slide-pager-target-4.jpg">
+    </div>
+    <div class="carousel-item">
+     <img src="images/slide-pager-target-5.jpg">
+    </div>
+    <div class="carousel-item">
+     <img src="images/slide-pager-target-6.jpg">
+    </div>                    
+   </div>
+  
+ </div> <!-- /slide-promotion -->
+ 
+ <div class="panel login-panel">
+  <div class="panel-heading">
+   <h2>주문을 위해 로그인 해주세요</h2>
+  </div>
+  
+  <div class="panel-body">
+   <form">
+    <div class="form-group">
+     <input type="text" class="form-control" id="inputId" placeholder="아이디">
+     <input type="password" class="form-control" id="inputPw" placeholder="비밀번호">
+    </div> 
+    <button type="submit" class="btn btn-primary">로그인</button>
+    <p class="forgot-password">
+     <a class="action-link" href="forgotPw.jsp">비밀번호 찾기</a>
+    </p>
+    <hr class="fading-divider">
+    <p class="guest">
+     <a class="action-link" href="guest.jsp">신규 회원</a> 
+    </p>
+   </form> 
+    
+   
+
+  </div>
+ </div> 
  
  
  
+ <div class="how-it-works home-section">
+  <h1>맥딜리버리 이용방법!</h1>
+   <p>
+    <a href="#signin" data-target="#signin" data-toggle="modal">
+     <img class="img-block" src="images/how-mcdelivery-works.png">
+    </a>
+   </p>
+ </div> <!-- /how-it-works -->
+ 
+
  <div class="footer">
   
   <div class="row bottom-menu">
