@@ -11,15 +11,18 @@
 <!-- 모바일 웹브라우져 대응 -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>맥딜리버리-메뉴</title>
-<!-- Bootstrap css 로딩 -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Bootstrap css 로딩 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 
 <body>
-<!-- Bootstrap 의 jquery 플러그인 기능 쓰기 위해 -->
+<!-- Bootstrap 의 jquery 플러그인 기능 쓰기 위해
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>	
 
 <!-- ================================================================================================================================================== -->
 <div class="root">
@@ -206,7 +209,7 @@
      </div>
      
      <div class="col-2">
-      <a href="#signin" data-target="#signin" data-toggle="modal">
+      <a class="orderlink" href="#signin" data-target="#signin" data-toggle="modal">
        <img class="img-block" src="images/how-mcdelivery-works-portrait.png">
       </a>
      </div>
@@ -216,6 +219,38 @@
   
  </div> <!-- main -->
  
+ <!-- modal (#signin) -->
+ <div class="modal fade" id="signin">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button class="modal-close" data-dismiss="modal">X</button>
+     <h4 class="modal-title">로고사진</h4>
+    </div>
+    <div class="modal-body">
+     <p>주문을 하시려면 로그인하시기 바랍니다.</p>
+     <form>
+      <div class="form-group">
+       <input type="text" class="form-control" id="inputId" placeholder="아이디">
+       <input type="password" class="form-control" id="inputPw" placeholder="비밀번호">
+      </div> 
+      <button type="submit" class="btn btn-primary">로그인</button>
+      <p class="forgot-password">
+       <a class="action-link" href="forgotPw.jsp">비밀번호 찾기</a>
+      </p>
+      <hr class="fading-divider">
+      <p class="guest">
+       <a class="action-link" href="guest.jsp">신규 회원</a> 
+      </p>
+     </form> 
+    </div>
+   </div>
+  </div>
+ </div>
+
+
+
+
 
  <div class="footer">
   
@@ -301,7 +336,14 @@
 
 
 <!-- ================================================================================================================================================== -->
+<script>
+$(document).ready(function() {
+	$(".orderlink").shown.bs.modal(function() {
+		 $("#signin").modal("toggle");	
+	 });
+})
 
+</script>
 
 
 </body>
