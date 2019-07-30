@@ -13,7 +13,7 @@
 <title>맥딜리버리-홈</title>
 <!-- Bootstrap css 로딩 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="css/bootstrap.css"/>
+<link rel="stylesheet" href="./resources/css/bootstrap.css"/>
 
 </head>
 
@@ -22,8 +22,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-<script src="js/jquery-3.2.1.js"></script>
-<script src="js/bootstrap.js"></script>	
+<script src="./resources/js/jquery-3.2.1.js"></script>
+<script src="./resources/js/bootstrap.js"></script>	
 
 <!-- ================================================================================================================================================== -->
 <div class="root">
@@ -47,10 +47,11 @@
    <div class="col-6 text-right quick-account">
     <ul class="list-inline">
      <li class="list-inline-item">
-      <a class="list-inline-item-target" href="#">로그인</a>
+      <a class="list-inline-item-target orderlink" href="#signin" data-target="#signin" data-toggle="modal">로그인</a>
+    
      </li>
      <li class="list-inline-item">
-      <a class="list-inline-item-target" href="#">주문 조회</a> 
+      <a class="list-inline-item-target orderlink" href="#signin" data-target="#signin" data-toggle="modal">주문 조회</a> 
      </li> 
     </ul>
    </div> 
@@ -58,7 +59,7 @@
   
   <div class="header-navbar navbar-default" role="navigation">
    <div class="navigation-first">
-    <a class="navbar-brand" href="home.jsp">홈</a>
+    <a class="navbar-brand" href="home.do">홈</a>
    </div>
    
    <div class="navigation-main">
@@ -112,22 +113,22 @@
   
    <div class="carousel-inner">
     <div class="carousel-item active" data-interval="10000">
-     <img src="images/slide-pager-target-1.png">
+     <img src="./resources/images/slide-pager-target-1.png">
     </div>
     <div class="carousel-item">
-     <img src="images/slide-pager-target-2.jpg">
+     <img src="./resources/images/slide-pager-target-2.jpg">
     </div>
     <div class="carousel-item">
-     <img src="images/slide-pager-target-3.jpg">
+     <img src="./resources/images/slide-pager-target-3.jpg">
     </div>
     <div class="carousel-item">
-     <img src="images/slide-pager-target-4.jpg">
+     <img src="./resources/images/slide-pager-target-4.jpg">
     </div>
     <div class="carousel-item">
-     <img src="images/slide-pager-target-5.jpg">
+     <img src="./resources/images/slide-pager-target-5.jpg">
     </div>
     <div class="carousel-item">
-     <img src="images/slide-pager-target-6.jpg">
+     <img src="./resources/images/slide-pager-target-6.jpg">
     </div>                    
    </div>
   
@@ -150,7 +151,7 @@
     </p>
     <hr class="fading-divider">
     <p class="guest">
-     <a class="action-link" href="guest.jsp">신규 회원</a> 
+     <a class="action-link" href="join-form.do">신규 회원</a> 
     </p>
    </form> 
     
@@ -165,7 +166,7 @@
   <h1>맥딜리버리 이용방법!</h1>
    <p>
     <a class="orderlink" href="#signin" data-target="#signin" data-toggle="modal">
-     <img class="img-block" src="images/how-mcdelivery-works.png">
+     <img class="img-block" src="./resources/images/how-mcdelivery-works.png">
     </a>
    </p>
  </div> <!-- /how-it-works -->
@@ -191,7 +192,7 @@
       </p>
       <hr class="fading-divider">
       <p class="guest">
-       <a class="action-link" href="guest.jsp">신규 회원</a> 
+       <a class="action-link" href="join-form.do">신규 회원</a> 
       </p>
      </form> 
     </div>
