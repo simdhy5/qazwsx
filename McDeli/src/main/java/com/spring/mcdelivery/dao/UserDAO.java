@@ -6,4 +6,10 @@ public interface UserDAO {
 
 	public void join(UserDTO dto);
 
+	public String emailCheck(String inputEmail);
+
+	public UserDTO login(String inputPw);
+
+
+
 }

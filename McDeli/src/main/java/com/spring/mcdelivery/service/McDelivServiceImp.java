@@ -12,11 +12,33 @@ public class McDelivServiceImp implements McDelivService {
 	@Autowired
 	private UserDAO dao;
 	
+	//회원가입
 	@Override
 	public void join(UserDTO dto) {
 		
 		dao.join(dto);
 		
+	}
+
+	//이메일 중복체크
+	@Override
+	public String emailCheck(String inputEmail) {
+
+		String dbEmail=dao.emailCheck(inputEmail);
+		
+		return dbEmail;
+	}
+
+	
+	//로그인 
+	@Override
+	public UserDTO login(String inputPw) {
+
+		UserDTO dto=dao.login(inputPw);
+		
+
+		
+		return dto;
 	}
 
 }

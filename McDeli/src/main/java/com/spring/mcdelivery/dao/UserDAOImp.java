@@ -12,6 +12,7 @@ public class UserDAOImp implements UserDAO {
 	@Autowired
 	private SqlSession session;
 	
+	//회원가입
 	@Override
 	public void join(UserDTO dto) {
 		
@@ -19,6 +20,24 @@ public class UserDAOImp implements UserDAO {
 		
 		session.insert("user.join", dto);
 		
+	}
+
+	//이메일 중복확인
+	@Override
+	public String emailCheck(String inputEmail) {
+
+		String dbEmail=session.selectOne("user.emailCheck", inputEmail);
+		
+		return dbEmail;
+	}
+
+	
+	//로그인
+	@Override
+	public UserDTO login(String inputPw) {
+		
+		UserDTO dto=session.selectOne("user.login",inputPw);
+		return dto;
 	}
 
 }
