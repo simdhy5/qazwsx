@@ -5,10 +5,13 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.mcdelivery.dto.UserDTO;
@@ -140,19 +143,25 @@ public class McDelivController {
 		UserDTO dto=new UserDTO();
 		dto=service.login(inputPw);
 		
-		System.out.println(dto);
+
 		
 		int result=0;
 		
 //		if (dto==null) {
 //			result=0;
 //		} 
-//		
-		if (dto.getEmail().equals(inputEmail)) {
-			result=1;
-			
-		}
 		
+		//db에서 넘어온 dto가 null일때 처리!!!
+		System.out.println("dto에 뭐 들어있?" + dto);
+		System.out.println("dto가 비었?" + StringUtils.isEmpty(dto)); //null이면 true
+
+		if(StringUtils.isEmpty(dto)) { //비번 틀린 경우
+			result=0;
+		} else {
+			if (dto.getEmail().equals(inputEmail)) { //비번 맞는 경우 -> 세션만들기
+				result=1;
+			}			
+		}		
 		return result;
 
 		
